@@ -124,11 +124,8 @@ dhs_data <- function(client=NULL,
                      returnFields=NULL,
                      perPage=NULL,
                      page=NULL) {
-
   # create query with all provided arguments
-  args <- ls()
-  query <- lapply(args, function(x) eval(parse(text = x)))
-  names(query) <- args
+  query <- args_to_query(environment())
 
   # specific endpoint for each function
   endpoint <- "https://api.dhsprogram.com/rest/dhs/data"
@@ -223,9 +220,7 @@ dhs_indicators <- function(client=NULL,
                            page=NULL) {
 
   # create query with all provided arguments
-  args <- ls()
-  query <- lapply(args, function(x) eval(parse(text = x)))
-  names(query) <- args
+  query <- args_to_query(environment())
 
   # specific endpoint for each function
   endpoint <- "https://api.dhsprogram.com/rest/dhs/indicators"
@@ -280,9 +275,7 @@ dhs_uiUpdates <- function(client=NULL,
                           page=NULL) {
 
   # create query with all provided arguments
-  args <- ls()
-  query <- lapply(args, function(x) eval(parse(text = x)))
-  names(query) <- args
+  query <- args_to_query(environment())
 
   # specific endpoint for each function
   endpoint <- "https://api.dhsprogram.com/rest/dhs/uiupdates"
@@ -342,9 +335,7 @@ dhs_info <- function(client=NULL,
                      page=NULL) {
 
   # create query with all provided arguments
-  args <- ls()
-  query <- lapply(args, function(x) eval(parse(text = x)))
-  names(query) <- args
+  query <- args_to_query(environment())
 
   # specific endpoint for each function
   endpoint <- "https://api.dhsprogram.com/rest/dhs/info"
@@ -439,9 +430,7 @@ dhs_countries <- function(client=NULL,
                           page=NULL) {
 
   # create query with all provided arguments
-  args <- ls()
-  query <- lapply(args, function(x) eval(parse(text = x)))
-  names(query) <- args
+  query <- args_to_query(environment())
 
   # specific endpoint for each function
   endpoint <- "https://api.dhsprogram.com/rest/dhs/countries"
@@ -553,9 +542,7 @@ dhs_surveys <- function(client=NULL,
                         page=NULL) {
 
   # create query with all provided arguments
-  args <- ls()
-  query <- lapply(args, function(x) eval(parse(text = x)))
-  names(query) <- args
+  query <- args_to_query(environment())
 
   # specific endpoint for each function
   endpoint <- "https://api.dhsprogram.com/rest/dhs/surveys"
@@ -641,9 +628,7 @@ dhs_surveyCharacteristics <- function(client=NULL,
                                       page=NULL) {
 
   # create query with all provided arguments
-  args <- ls()
-  query <- lapply(args, function(x) eval(parse(text = x)))
-  names(query) <- args
+  query <- args_to_query(environment())
 
   # specific endpoint for each function
   endpoint <- "https://api.dhsprogram.com/rest/dhs/surveycharacteristics"
@@ -745,9 +730,7 @@ dhs_publications <- function(client=NULL,
                              page=NULL) {
 
   # create query with all provided arguments
-  args <- ls()
-  query <- lapply(args, function(x) eval(parse(text = x)))
-  names(query) <- args
+  query <- args_to_query(environment())
 
   # specific endpoint for each function
   endpoint <- "https://api.dhsprogram.com/rest/dhs/publications"
@@ -844,9 +827,7 @@ dhs_datasets <- function(client=NULL,
                          page=NULL) {
 
   # create query with all provided arguments
-  args <- ls()
-  query <- lapply(args, function(x) eval(parse(text = x)))
-  names(query) <- args
+  query <- args_to_query(environment())
 
   # specific endpoint for each function
   endpoint <- "https://api.dhsprogram.com/rest/dhs/datasets"
@@ -926,9 +907,7 @@ dhs_geometry <- function(client=NULL,
                          page=NULL) {
 
   # create query with all provided arguments
-  args <- ls()
-  query <- lapply(args, function(x) eval(parse(text = x)))
-  names(query) <- args
+  query <- args_to_query(environment())
 
   # specific endpoint for each function
   endpoint <- "https://api.dhsprogram.com/rest/dhs/geometry"
@@ -1013,9 +992,7 @@ dhs_tags <- function(client=NULL,
                      page=NULL) {
 
   # create query with all provided arguments
-  args <- ls()
-  query <- lapply(args, function(x) eval(parse(text = x)))
-  names(query) <- args
+  query <- args_to_query(environment())
 
   # specific endpoint for each function
   endpoint <- "https://api.dhsprogram.com/rest/dhs/tags"
@@ -1070,9 +1047,7 @@ dhs_dataUpdates <- function(client=NULL,
                             page=NULL) {
 
   # create query with all provided arguments
-  args <- ls()
-  query <- lapply(args, function(x) eval(parse(text = x)))
-  names(query) <- args
+  query <- args_to_query(environment())
 
   # specific endpoint for each function
   endpoint <- "https://api.dhsprogram.com/rest/dhs/dataupdates"
