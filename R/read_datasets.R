@@ -294,7 +294,10 @@ read_zipdata <- function(zfile, pattern=".dta$",
                    file[1], "'."))
   }
 
-  return(readfn(unzip(zfile, file[1], exdir = tmp), ...))
+  ## return(readfn(unzip(zfile, file[1], exdir = tmp), ...))
+
+  system2("unzip", args=c(zfile, file[1], paste("-d", tmp)), stdout=FALSE)
+  return(readfn(file.path(tmp, file[1]), ...))
 }
 
 
